@@ -14,6 +14,7 @@ if "{{cookiecutter.initialize_git}}":
 else:
     pass
 
+print(f"----- [*] GENERATING PROJECT [*] ----- {{cookiecutter.setup_pre_commit_hooks}}")
 if "{{cookiecutter.setup_pre_commit_hooks}}":
     subprocess.run(["pre-commit", "install", "--install-hooks"])
 else:
